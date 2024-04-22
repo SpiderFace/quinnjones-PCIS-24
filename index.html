@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Momentum</title>
+</head>
 <body>
-    <div class: "header">
-        <h1>Momentum</h1>
-        <h2>Advanced Assignment Tracker</h2>
-        <h3>Created by Quinn Jones for PCIS 2024</h3>
+    <div class: "container">
+        <div class: "header">
+            <h1>Advanced assignment tracker</h1>
+            <h2>Created by Quinn Jones - Prosper Career Independent Study 2023-24</h2>
+            <img src="https://drive.google.com/file/d/17vU2bjSF5CrADOrf-Xhj0SOQ1dlt6tRq/view?usp=sharing" alt="Momentum Icon">
+        </div>
+        <div class: "input-container">
+            <input type="text" id="assignment-name-input" placeholder="Enter assignment name...">
+            <input type="date" id="assignment-due-date-input">
+            <button onclick="CreateTask()">Create assignment!</button>
+        </div>
+        <div id="assignment-list">
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
