@@ -40,45 +40,6 @@ function addTask() {
     }
 }
 
-
-
-
-
-// Function to open the notes modal
-function openNotesModal(button) {
-    const task = button.closest('.task');
-    const taskName = task.querySelector('.task-name').textContent;
-
-    // Display the overlay and modal
-    const overlay = document.querySelector('.overlay');
-    const modal = document.querySelector('.modal');
-
-    overlay.style.display = 'block';
-    modal.style.display = 'block';
-
-    // Populate modal with current notes
-    const modalTextarea = document.querySelector('.modal textarea');
-    modalTextarea.value = button.getAttribute('data-notes') || '';
-    modalTextarea.placeholder = `Add notes for "${taskName}"`;
-
-    // Save button click listener
-    const saveButton = document.querySelector('.modal button');
-    saveButton.onclick = function () {
-        const notesValue = modalTextarea.value;
-        button.setAttribute('data-notes', notesValue);
-        closeModal();
-    };
-}
-
-// Function to save notes
-function saveNotes() {
-    const overlay = document.querySelector('.overlay');
-    const modal = document.querySelector('.modal');
-
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
-}
-
 // Function to remove a task
 function removeTask(element) {
     const taskList = document.getElementById('taskList');
@@ -87,30 +48,11 @@ function removeTask(element) {
     itemizeListByDate(); // Reorganize the list after removal
 }
 
-
 // Function to format date as YYYY-MM-DD
 function formatDate(dateString) {
     const options = { year: 'numeric', month: '2-digit', day: '2-digit' };
     const [year, month, day] = dateString.split('-');
     return new Date(`${month}/${day}/${year}`).toLocaleDateString('en-US', options);
-}
-
-// Function to update notes for a task
-function updateNotes(select) {
-    const task = select.closest('.task');
-    const notesDropdown = task.querySelector('.notes-dropdown');
-    const updatedNotes = notesDropdown.value;
-    
-    // Update the task's notes
-    task.innerHTML = `
-        <span>${task.querySelector('span').textContent}</span>
-        <span class="due-date">${task.querySelector('.due-date').textContent}</span>
-        <select class="notes-dropdown" onchange="updateNotes(this)">
-            <option value="">Select Notes</option>
-            <option value="${updatedNotes}" selected>${updatedNotes}</option>
-        </select>
-        <img src="https://cdn-icons-png.flaticon.com/512/542/542724.png" alt="Delete Task" onclick="removeTask(this)">
-    `;
 }
 
 // Function to itemize the list based on due dates
@@ -140,12 +82,4 @@ function itemizeListByDate() {
     taskList.innerHTML = '';
     datedTasks.forEach(task => taskList.appendChild(task));
     undatedTasks.forEach(task => taskList.appendChild(task));
-}
-//-----------------
-function closeModal() {
-    const overlay = document.querySelector('.overlay');
-    const modal = document.querySelector('.modal');
-
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
 }
