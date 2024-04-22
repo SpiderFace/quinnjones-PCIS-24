@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Momentum</title>
+    <title>Task Manager</title>
 </head>
 <body>
-    <div class: "container">
-        <div class: "header">
-            <h1>Momentum</h1>
-            <h2>Advanced assignment tracker</h2>
-            <h3>Created by Quinn Jones - Prosper Career Independent Study 2023-24</h3>
-            <img src="https://drive.google.com/file/d/17vU2bjSF5CrADOrf-Xhj0SOQ1dlt6tRq/view?usp=sharing" alt="Momentum Icon">
+    <div class="container">
+        <div class="header">
+            <h1>Task Manager</h1>
+            <img src="https://www.shareicon.net/data/2015/11/23/676769_clipboard_512x512.png" alt="Task Manager Icon">
         </div>
-        <div class: "input-container">
-            <input type="text" id="assignment-name-input" placeholder="Enter assignment name...">
-            <input type="date" id="assignment-due-date-input">
-            <button onclick="CreateTask()">Create assignment!</button>
+        <div class="input-container">
+            <input type="text" id="taskInput" placeholder="Add a new task">
+            <input type="date" id="dueDateInput">
+            <button onclick="addTask()">Add Task</button>
         </div>
-        <div id="assignment-list">
+        <div id="taskList">
         </div>
+    </div>
+
+    <div class="overlay"></div>
+    <div class="modal">
+        <textarea rows="4" cols="50"></textarea>
+        <button onclick="saveNotes()">Save</button>
     </div>
 
     <script src="script.js"></script>
