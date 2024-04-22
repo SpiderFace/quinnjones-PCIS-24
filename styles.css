@@ -13,10 +13,6 @@ body {
     background-color: #ededff;
 }
 
-.header {
-    text-align: center;
-}
+.header {}
 
-.input-container {
-    text-align: left;
-}
+.input-container {}
