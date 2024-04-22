@@ -9,7 +9,6 @@ body {
 }
 
 .container {
-    text-align: left;
     background-color: #ededff;
     padding: 20px;
     border-radius: 10px;
@@ -17,5 +16,9 @@ body {
 }
 
 .header {
-    background-color: red;
+    text-align: center;
+}
+
+.input-container {
+    text-align: left;
 }
