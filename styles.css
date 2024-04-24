@@ -17,6 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .logo img {
@@ -27,6 +28,7 @@ body {
 .subheader {
     display: flex;
     align-items: left;
+    margin-bottom: 20px;
 }
 
 #taskList {
