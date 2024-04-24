@@ -30,12 +30,6 @@ body {
     height: 5%;
 }
 
-.subheader {
-    display: flex;
-    align-items: left;
-    margin-bottom: 20px;
-}
-
 #taskList {
     margin-top: 20px;
 }
