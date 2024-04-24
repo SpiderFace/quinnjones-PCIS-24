@@ -20,12 +20,12 @@ body {
     margin-bottom: 10px;
 }
 
-.logo {
+#logo {
     align-items: top;
     justify-content: right;
 }
 
-.logo img {
+#logo img {
     width: 5%;
     height: 5%;
 }
