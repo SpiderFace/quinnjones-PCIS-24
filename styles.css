@@ -9,13 +9,9 @@ body {
 }
 
 #logo {
-    align-items: top;
-    justify-content: right;
-}
-
-#logo img {
-    width: 5%;
-    height: 5%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .container {
