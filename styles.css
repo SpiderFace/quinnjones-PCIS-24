@@ -8,6 +8,16 @@ body {
     background-color: rgb(220, 255, 220);
 }
 
+#logo {
+    align-items: top;
+    justify-content: right;
+}
+
+#logo img {
+    width: 5%;
+    height: 5%;
+}
+
 .container {
     text-align: center;
     padding: 20px;
@@ -18,16 +28,6 @@ body {
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
-}
-
-#logo {
-    align-items: top;
-    justify-content: right;
-}
-
-#logo img {
-    width: 5%;
-    height: 5%;
 }
 
 #taskList {
