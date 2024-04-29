@@ -1,68 +1,54 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: top;
-    height: 100vh;
-    background-color: rgb(220, 255, 220);
-}
-
-.body img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50px;
-    height: 50px;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #dcffdc;
 }
 
 .container {
-    text-align: center;
+    margin: 0 auto;
+    max-width: 600px;
     padding: 20px;
+    text-align: center;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 10px;
+.header h1 {
+    margin-top: 0px;
 }
 
-#taskList {
-    margin-top: 20px;
+#logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
-.task img {
-    width: 25px;
-    height: 25px;
-    cursor: pointer;
-    transition: transform 0.3s;
-    margin-left: 10px;
-
+.input-container input[type="text"],
+.input-container input[type="date"],
+.input-container button {
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.task .delete-icon:hover {
-    transform: scale(1.2);
+.input-container input[type="text"],
+.input-container input[type="date"] {
+    width: calc(50% - 10px);
 }
 
-
-.task {
-    background-color: #e8f0fe;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.input-container button {
+    padding: 10px 20px;
+    background-color: #38761d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-left: 5px solid #3498db; /* Add a left border with a color */
-    margin-bottom: 10px; /* Adjust spacing between tasks */
-
 }
 
-.task:hover {
-    background-color: #cfdfff;
+.input-container button:hover {
+    background-color: #45a049;
 }
 
 #taskInput {
@@ -73,28 +59,6 @@ body {
     width: 70%;
 }
 
-button {
-    padding: 10px 20px;
-    background-color: #38761d;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-
-.input-container {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 #dueDateInput {
     padding: 12px;
     border: 1px solid #ccc;
@@ -103,12 +67,46 @@ button:hover {
     width: 200px;
 }
 
+#taskList {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.task {
+    background-color: #e8f0fe;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-left: 5px solid #3498db; /* Left border will represent time to due date */
+    margin-bottom: 10px; /* Adjust spacing between tasks */
+
+}
+
+.task img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    margin-left: 10px;
+}
+
+/*.task .delete-icon:hover {
+    transform: scale(1.2);
+}
+
+.task:hover {
+    background-color: #cfdfff;
+}
 
 .task.align-task {
     display: flex;
-    align-items: stretch; /* Ensure all items have the same height */
+    align-items: stretch; /* Ensure all items have the same height * /
     justify-content: space-between;
-}
+}*/
 
 .task-name,
 .due-date {
