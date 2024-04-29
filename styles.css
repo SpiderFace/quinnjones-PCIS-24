@@ -17,11 +17,11 @@ body {
 }
 
 #logo {
-    position: absolute;
+    position: relative;
     top: 10px;
     right: 10px;
-    height: 3%;
-    width: 3%;
+    width: 3vh;
+    height: 3vh;
 }
 
 .input-container input[type="text"],
