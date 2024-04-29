@@ -8,35 +8,25 @@ function addTask() {
         const newTask = document.createElement('div');
         newTask.className = 'task align-task';
 
-        const dueDateValue = dueDateInput.value;
-        const formattedDueDate = dueDateValue ? formatDate(dueDateValue) : 'No Due Date';
-
         const taskName = document.createElement('span');
         taskName.className = 'task-name';
-
-        // Set the text content to the abbreviated task name
         taskName.textContent = taskInput.value;
 
-        if (taskInput.value.length >= 15) {
-            taskName.setAttribute('data-tooltip', taskInput.value);
-        }
-
+        let dueDateValue = dueDateInput.value ? formatDate(dueDateInput.value) : 'No Due Date';
         const dueDate = document.createElement('span');
         dueDate.className = 'due-date';
-        dueDate.textContent = formattedDueDate;
+        dueDate.textContent = dueDateValue;
 
         newTask.appendChild(taskName);
         newTask.appendChild(dueDate);
         newTask.innerHTML += `
             <button class="edit-notes-button" onclick="openNotesModal(this)" data-notes="">Add/Edit Notes</button>
-            <img class="delete-icon" src="https://cdn-icons-png.flaticon.com/512/542/542724.png" alt="Delete Task" onclick="removeTask(this)">
-        `;
+            <img class="delete-icon" src="https://cdn-icons-png.flaticon.com/512/542/542724.png" alt="Delete Task" onclick="removeTask(this)">`;
 
         taskList.appendChild(newTask);
         taskInput.value = '';
         dueDateInput.value = '';
-
-        itemizeListByDate();
+        sortByDate();
     }
 }
 
@@ -56,7 +46,7 @@ function formatDate(dateString) {
 }
 
 // Function to itemize the list based on due dates
-function itemizeListByDate() {
+function sortByDate() {
     const taskList = document.getElementById('taskList');
     const tasks = Array.from(taskList.children);
 
