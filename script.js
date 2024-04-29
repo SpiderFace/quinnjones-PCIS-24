@@ -19,9 +19,7 @@ function addTask() {
 
         newTask.appendChild(taskName);
         newTask.appendChild(dueDate);
-        newTask.innerHTML += `
-            <button class="edit-notes-button" onclick="openNotesModal(this)" data-notes="">Add/Edit Notes</button>
-            <img class="delete-icon" src="https://cdn-icons-png.flaticon.com/512/542/542724.png" alt="Delete Task" onclick="removeTask(this)">`;
+        newTask.innerHTML += `<img class="delete-icon" src="https://cdn-icons-png.flaticon.com/512/542/542724.png" alt="Delete Task" onclick="removeTask(this)">`;
 
         taskList.appendChild(newTask);
         taskInput.value = '';
