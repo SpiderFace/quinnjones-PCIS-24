@@ -86,9 +86,8 @@ body {
     justify-content: space-between;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-left: 5px solid #3498db; /* Left border will represent time to due date */
-    margin-bottom: 10px; /* Adjust spacing between tasks */
-
+    border-left: 5px solid #3498db;
+    margin-bottom: 10px;
 }
 
 .task img {
@@ -99,19 +98,13 @@ body {
     margin-left: 10px;
 }
 
-/*.task .delete-icon:hover {
+.task .delete-icon:hover {
     transform: scale(1.2);
 }
 
 .task:hover {
     background-color: #cfdfff;
 }
-
-.task.align-task {
-    display: flex;
-    align-items: stretch; /* Ensure all items have the same height * /
-    justify-content: space-between;
-}*/
 
 .task-name,
 .group-name,
