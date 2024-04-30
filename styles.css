@@ -109,16 +109,9 @@ body {
 .task-name,
 .group-name,
 .due-date {
-    flex-grow: 1; /* Allow these items to grow within the flex container */
-    overflow: hidden; /* Handle overflow gracefully */
-    text-overflow: ellipsis; /* Display ellipsis for overflow text */
-    white-space: nowrap; /* Prevent wrapping for long text */
-}
-
-.task-name {
     flex-grow: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    max-width: 150px; /* or your preferred value */
+    max-width: 150px;
 }
