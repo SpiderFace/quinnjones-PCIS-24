@@ -78,7 +78,7 @@ body {
 }
 
 .task {
-    background-color: #ffdcdc;
+    background-color: #f0fff0;
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -86,7 +86,7 @@ body {
     justify-content: space-between;
     cursor: pointer;
     transition: background-color 0.3s;
-    border-left: 5px solid #500000;
+    border-left: 8px solid #0f0;
     margin-bottom: 10px;
 }
 
@@ -103,7 +103,7 @@ body {
 }
 
 .task:hover {
-    background-color: #ffafaf;
+    background-color: #afffaf;
 }
 
 .task-name,
