@@ -17,7 +17,7 @@ body {
     margin-bottom: 0px;
 }
 
-h2 {
+.header h2 {
     margin-top: 0px;
 }
 
@@ -58,6 +58,14 @@ h2 {
 }
 
 #taskInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
+}
+
+#groupInput {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
