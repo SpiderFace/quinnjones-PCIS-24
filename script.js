@@ -1,6 +1,7 @@
 // Updated Function to add a new task without drag and drop
 function addTask() {
     const taskInput = document.getElementById('taskInput');
+    const groupInput = document.getElementById('groupInput');
     const dueDateInput = document.getElementById('dueDateInput');
     const taskList = document.getElementById('taskList');
 
@@ -12,12 +13,17 @@ function addTask() {
         taskName.className = 'task-name';
         taskName.textContent = taskInput.value;
 
+        const groupName = document.createElement('span');
+        groupName.className = 'group-name';
+        groupName.textContent = groupInput.value;
+
         let dueDateValue = dueDateInput.value ? formatDate(dueDateInput.value) : 'No Due Date';
         const dueDate = document.createElement('span');
         dueDate.className = 'due-date';
         dueDate.textContent = dueDateValue;
 
         newTask.appendChild(taskName);
+        newTask.appendChild(groupName);
         newTask.appendChild(dueDate);
         newTask.innerHTML += `<img class="delete-icon" src="https://cdn-icons-png.flaticon.com/512/542/542724.png" alt="Delete Task" onclick="removeTask(this)">`;
 
