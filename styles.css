@@ -43,13 +43,14 @@ h2 {
 }
 
 .input-container button {
-    padding: 10px 20px;
+    padding: 9px 11px;
     background-color: #38761d;
     color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 16px;
 }
 
 .input-container button:hover {
@@ -60,16 +61,16 @@ h2 {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-right: 10px;
-    width: 70%;
+    margin-bottom: 10px;
+    width: -webkit-fill-available;
 }
 
 #dueDateInput {
-    padding: 12px;
+    padding: 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
-    width: 200px;
+    width: 50%;
 }
 
 #taskList {
