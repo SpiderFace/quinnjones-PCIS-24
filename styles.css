@@ -114,6 +114,7 @@ body {
 }*/
 
 .task-name,
+.group-name,
 .due-date {
     flex-grow: 1; /* Allow these items to grow within the flex container */
     overflow: hidden; /* Handle overflow gracefully */

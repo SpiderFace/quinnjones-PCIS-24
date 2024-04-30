@@ -29,6 +29,7 @@ function addTask() {
 
         taskList.appendChild(newTask);
         taskInput.value = '';
+        groupInput.value = '';
         dueDateInput.value = '';
         sortByDate();
     }
