@@ -115,3 +115,7 @@ body {
     white-space: nowrap;
     max-width: 150px;
 }
+
+.task-name {
+    font-weight: 650;
+}
